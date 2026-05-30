@@ -1,0 +1,14 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/helpkpcg/public_html/
+    - /bin/cp -R index.php $DEPLOYPATH
+    - /bin/cp -R about.php $DEPLOYPATH
+    - /bin/cp -R contact.php $DEPLOYPATH
+    - /bin/cp -R services.php $DEPLOYPATH
+    - /bin/cp -R training.php $DEPLOYPATH
+    - /bin/cp -R employers.php $DEPLOYPATH
+    - /bin/cp -R job-seekers.php $DEPLOYPATH
+    - /bin/cp -R jobs.php $DEPLOYPATH
+    - /bin/cp -R send-mail.php $DEPLOYPATH
+    - /bin/cp -R vendor $DEPLOYPATH
