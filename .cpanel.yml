@@ -2,13 +2,23 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/helpkpcg/public_html/
-    - /bin/cp -R index.php $DEPLOYPATH
-    - /bin/cp -R about.php $DEPLOYPATH
-    - /bin/cp -R contact.php $DEPLOYPATH
-    - /bin/cp -R services.php $DEPLOYPATH
-    - /bin/cp -R training.php $DEPLOYPATH
-    - /bin/cp -R employers.php $DEPLOYPATH
-    - /bin/cp -R job-seekers.php $DEPLOYPATH
-    - /bin/cp -R jobs.php $DEPLOYPATH
-    - /bin/cp -R send-mail.php $DEPLOYPATH
-    - /bin/cp -R vendor $DEPLOYPATH
+
+    # Copy main PHP pages to the live domain folder
+    - /bin/cp -f index.php $DEPLOYPATH
+    - /bin/cp -f about.php $DEPLOYPATH
+    - /bin/cp -f contact.php $DEPLOYPATH
+    - /bin/cp -f services.php $DEPLOYPATH
+    - /bin/cp -f training.php $DEPLOYPATH
+    - /bin/cp -f employers.php $DEPLOYPATH
+    - /bin/cp -f job-seekers.php $DEPLOYPATH
+    - /bin/cp -f jobs.php $DEPLOYPATH
+    - /bin/cp -f send-mail.php $DEPLOYPATH
+
+    # Copy Composer/PHPMailer vendor folder if it exists
+    - /bin/cp -Rf vendor $DEPLOYPATH
+
+    # Create storage folder on live server
+    - /bin/mkdir -p ${DEPLOYPATH}storage
+
+    # Set safe permissions
+    - /bin/chmod 755 ${DEPLOYPATH}storage
