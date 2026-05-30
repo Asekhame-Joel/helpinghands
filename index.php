@@ -495,63 +495,62 @@
     </div>
   </section>
 
-  <section class="py-20 bg-cloud">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
-      <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-card reveal border border-line">
-        <span class="chip">For Employers</span>
-        <h3 class="mt-4 text-2xl md:text-3xl font-extrabold text-navy">Reliable Healthcare Staff When You Need Them Most
-        </h3>
-        <p class="mt-3 text-slate-600">We help care homes, hospitals, clinics and healthcare organisations fill staffing
-          gaps with carefully screened professionals.</p>
-        <ul class="mt-6 space-y-3">
-          <li class="flex items-start gap-3"><span class="text-teal mt-1">✓</span><span
-              class="text-slate-700 text-sm"><b class="text-navy">Fast response.</b> Urgent shifts covered around the
-              clock.</span></li>
-          <li class="flex items-start gap-3"><span class="text-teal mt-1">✓</span><span
-              class="text-slate-700 text-sm"><b class="text-navy">Vetted candidates.</b> Pre-screened, qualified and
-              references verified.</span></li>
-          <li class="flex items-start gap-3"><span class="text-teal mt-1">✓</span><span
-              class="text-slate-700 text-sm"><b class="text-navy">DBS & RTW checks.</b> Full compliance documentation
-              provided.</span></li>
-          <li class="flex items-start gap-3"><span class="text-teal mt-1">✓</span><span
-              class="text-slate-700 text-sm"><b class="text-navy">Flexible staffing.</b> Temporary, contract and
-              permanent solutions.</span></li>
-          <li class="flex items-start gap-3"><span class="text-teal mt-1">✓</span><span
-              class="text-slate-700 text-sm"><b class="text-navy">Sector expertise.</b> Care homes, hospitals, clinics &
-              community.</span></li>
-        </ul>
-        <a href="employers.php" class="inline-flex mt-7 btn-navy px-6 py-3 rounded-full font-bold text-sm">Request Staff
-          →</a>
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div class="space-y-6">
+        <div class="max-w-3xl space-y-4"><span
+            class="inline-flex items-center gap-2 rounded-full border px-3.5 py-1 text-xs font-semibold uppercase tracking-wider border-brand-teal/20 text-brand-teal bg-brand-teal/5"><span
+              class="h-1.5 w-1.5 rounded-full bg-brand-teal"></span>For Employers</span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold ">Reliable healthcare staff when you need them most.
+          </h2>
+          <p class="text-base md:text-lg leading-relaxed text-muted-foreground">We help care homes, hospitals, clinics
+            and healthcare organisations fill staffing gaps with carefully screened professionals — fast.</p>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><svg class="h-5 w-5 text-brand-green mt-0.5 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m9 12 2 2 4-5" />
+            </svg><span class="text-foreground/80">Fast response — staff in as little as 2 hours</span></li>
+          <li class="flex items-start gap-3"><svg class="h-5 w-5 text-brand-green mt-0.5 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m9 12 2 2 4-5" />
+            </svg><span class="text-foreground/80">Fully vetted, reference-checked candidates</span></li>
+          <li class="flex items-start gap-3"><svg class="h-5 w-5 text-brand-green mt-0.5 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m9 12 2 2 4-5" />
+            </svg><span class="text-foreground/80">DBS and right-to-work compliance built in</span></li>
+          <li class="flex items-start gap-3"><svg class="h-5 w-5 text-brand-green mt-0.5 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m9 12 2 2 4-5" />
+            </svg><span class="text-foreground/80">Flexible — temporary, contract and permanent</span></li>
+          <li class="flex items-start gap-3"><svg class="h-5 w-5 text-brand-green mt-0.5 flex-shrink-0"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m9 12 2 2 4-5" />
+            </svg><span class="text-foreground/80">Dedicated account manager for every client</span></li>
+        </ul><a href="employers.html"
+          class="inline-flex items-center gap-2 rounded-full bg-brand-gold px-6 py-3 font-semibold text-brand-gold-foreground hover:-translate-y-0.5 transition-all shadow-soft">Request
+          Staff <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg></a>
       </div>
-      <div class="bg-navy text-white rounded-3xl p-8 lg:p-10 shadow-card reveal relative overflow-hidden">
-        <div class="absolute top-0 right-0 h-40 w-40 bg-gold/20 rounded-full blur-3xl"></div>
-        <span
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-teal-50 text-xs font-bold">For
-          Job Seekers</span>
-        <h3 class="mt-4 text-2xl md:text-3xl font-extrabold">Find Meaningful Healthcare Work That Fits Your Life</h3>
-        <p class="mt-3 text-slate-300">Discover flexible shifts, full-time roles, part-time roles, and long-term career
-          opportunities across the UK.</p>
-        <ul class="mt-6 space-y-3">
-          <li class="flex items-start gap-3"><span class="text-gold mt-1">★</span><span
-              class="text-slate-200 text-sm"><b class="text-white">Flexible shifts.</b> Choose hours that fit your
-              lifestyle.</span></li>
-          <li class="flex items-start gap-3"><span class="text-gold mt-1">★</span><span
-              class="text-slate-200 text-sm"><b class="text-white">Career guidance.</b> Personalised support from our
-              consultants.</span></li>
-          <li class="flex items-start gap-3"><span class="text-gold mt-1">★</span><span
-              class="text-slate-200 text-sm"><b class="text-white">Training support.</b> Access to mandatory and
-              specialist training.</span></li>
-          <li class="flex items-start gap-3"><span class="text-gold mt-1">★</span><span
-              class="text-slate-200 text-sm"><b class="text-white">Fair opportunities.</b> Equal access for all
-              qualified professionals.</span></li>
-          <li class="flex items-start gap-3"><span class="text-gold mt-1">★</span><span
-              class="text-slate-200 text-sm"><b class="text-white">Supportive team.</b> Real people who care about your
-              career.</span></li>
-        </ul>
-        <a href="jobs.php" class="inline-flex mt-7 btn-primary px-6 py-3 rounded-full font-bold text-sm">View Jobs →</a>
-      </div>
+      <div class="relative order-first lg:order-last"><img src="assets/nurses-working.jpg"
+          alt="Nurses working in hospital" loading="lazy"
+          class="rounded-3xl shadow-card object-cover w-full aspect-[4/3]" /></div>
     </div>
   </section>
+
 
   <section class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

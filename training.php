@@ -1,250 +1,449 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Training & Compliance — Helping Hands Health Group</title>
-<meta name="description" content="UK healthcare compliance, DBS, training & safeguarding standards."/>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        navy: { DEFAULT:'#0B1F3A', 700:'#13315c', 600:'#1c4170' },
-        teal: { DEFAULT:'#0E8F8F', 600:'#0c7a7a', 50:'#e6f5f5' },
-        green: { care:'#1F9D55' },
-        gold: { DEFAULT:'#F5A623', 600:'#dc9013' },
-        ink: '#0f172a',
-        cloud: '#F7FAFC',
-        line: '#e6ebf2'
-      },
-      fontFamily: {
-        display: ['"Plus Jakarta Sans"','sans-serif'],
-        sans: ['Inter','sans-serif']
-      },
-      boxShadow: {
-        soft: '0 10px 30px -12px rgba(11,31,58,0.15)',
-        card: '0 4px 24px -8px rgba(11,31,58,0.12)'
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Training &amp; Compliance — Helping Hands Health Group</title>
+  <meta name="description"
+    content="DBS checks, right-to-work, mandatory healthcare training, safeguarding and continuous professional development." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'], display: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'] }, colors: { background: 'var(--background)', foreground: 'var(--foreground)', card: 'var(--card)', border: 'var(--border)', input: 'var(--input)', ring: 'var(--ring)', primary: { DEFAULT: 'var(--primary)', foreground: 'var(--primary-foreground)' }, secondary: { DEFAULT: 'var(--secondary)', foreground: 'var(--secondary-foreground)' }, muted: { DEFAULT: 'var(--muted)', foreground: 'var(--muted-foreground)' }, accent: { DEFAULT: 'var(--accent)', foreground: 'var(--accent-foreground)' }, 'brand-navy': 'var(--brand-navy)', 'brand-teal': 'var(--brand-teal)', 'brand-green': 'var(--brand-green)', 'brand-gold': { DEFAULT: 'var(--brand-gold)', foreground: 'var(--brand-gold-foreground)' }, 'brand-sky': 'var(--brand-sky)' }, boxShadow: { card: 'var(--shadow-card)', soft: 'var(--shadow-soft)' }, backgroundImage: { 'gradient-hero': 'var(--gradient-hero)', 'gradient-soft': 'var(--gradient-soft)' }, borderRadius: { '2xl': 'calc(var(--radius) + 8px)', '3xl': 'calc(var(--radius) + 12px)' } } } };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+    :root {
+      --radius: 1rem;
+      --background: #ffffff;
+      --foreground: #1e293b;
+      --card: #ffffff;
+      --primary: #0B1F3A;
+      --primary-foreground: #ffffff;
+      --secondary: #eef6fb;
+      --secondary-foreground: #0B1F3A;
+      --muted: #f8fafc;
+      --muted-foreground: #64748b;
+      --accent: #0E8F8F;
+      --accent-foreground: #ffffff;
+      --brand-navy: #0B1F3A;
+      --brand-teal: #0E8F8F;
+      --brand-green: #1F9D55;
+      --brand-gold: #F5A623;
+      --brand-gold-foreground: #0B1F3A;
+      --brand-sky: #edf8fb;
+      --border: #e2e8f0;
+      --input: #e2e8f0;
+      --ring: #0E8F8F;
+      --gradient-hero: linear-gradient(135deg, #0B1F3A 0%, #123765 55%, #0E8F8F 100%);
+      --gradient-soft: linear-gradient(180deg, #ffffff 0%, #edf8fb 100%);
+      --shadow-card: 0 12px 40px -16px rgba(11, 31, 58, .24);
+      --shadow-soft: 0 6px 24px -10px rgba(11, 31, 58, .16)
+    }
+
+    * {
+      border-color: var(--border)
+    }
+
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: -.02em;
+      color: var(--primary)
+    }
+
+    .animate-fade-up {
+      animation: fade-up .7s ease-out both
+    }
+
+    .animate-fade-in {
+      animation: fade-in .6s ease-out both
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
       }
     }
-  }
-}
-</script>
-<style>
-  html { scroll-behavior:smooth; }
-  body { font-family:'Inter',sans-serif; color:#0f172a; background:#fff; }
-  h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; letter-spacing:-0.02em; }
-  .gradient-hero {
-    background:
-      radial-gradient(1200px 600px at 80% -10%, rgba(14,143,143,0.18), transparent 60%),
-      radial-gradient(900px 500px at -10% 20%, rgba(11,31,58,0.10), transparent 60%),
-      linear-gradient(180deg,#F7FAFC 0%, #ffffff 100%);
-  }
-  .reveal { opacity:0; transform:translateY(20px); transition:all .8s ease; }
-  .reveal.in { opacity:1; transform:none; }
-  .nav-link { position:relative; }
-  .nav-link::after { content:''; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:#0E8F8F; transition:width .25s; }
-  .nav-link:hover::after, .nav-link.active::after { width:100%; }
-  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.4rem .8rem; border-radius:9999px; background:#e6f5f5; color:#0c7a7a; font-weight:600; font-size:.78rem; }
-  .btn-primary { background:#F5A623; color:#0B1F3A; }
-  .btn-primary:hover { background:#dc9013; }
-  .btn-navy { background:#0B1F3A; color:#fff; }
-  .btn-navy:hover { background:#13315c; }
-  .btn-outline { border:1.5px solid #0B1F3A; color:#0B1F3A; }
-  .btn-outline:hover { background:#0B1F3A; color:#fff; }
-  .card-hover { transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
-  .card-hover:hover { transform: translateY(-4px); box-shadow:0 18px 40px -16px rgba(11,31,58,0.22); border-color:#0E8F8F; }
-</style>
+
+    @keyframes fade-in {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+  </style>
 </head>
-<body class="antialiased">
 
-<header id="site-header" class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-line">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between">
-    <a href="index.php" class="flex items-center gap-3">
-      <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-navy to-teal text-white grid place-items-center font-bold shadow-soft">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </div>
-      <div class="leading-tight">
-        <div class="font-display font-extrabold text-navy text-[15px]">Helping Hands</div>
-        <div class="text-[11px] tracking-[0.18em] text-teal font-semibold uppercase">Health Group</div>
-      </div>
-    </a>
-    <nav class="hidden lg:flex items-center gap-7"><a href="index.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">Home</a>
-<a href="about.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">About</a>
-<a href="employers.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">Employers</a>
-<a href="job-seekers.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">Job Seekers</a>
-<a href="services.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">Services</a>
-<a href="jobs.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">Jobs</a>
-<a href="training.php" class="nav-link active text-navy text-sm font-semibold">Training</a>
-<a href="contact.php" class="nav-link text-slate-700 hover:text-navy text-sm font-semibold">Contact</a>
-</nav>
-    <div class="flex items-center gap-3">
-      <a href="contact.php" class="hidden sm:inline-flex btn-primary px-5 py-2.5 rounded-full text-sm font-bold shadow-soft transition">Get Started</a>
-      <button id="menuBtn" class="lg:hidden p-2 rounded-md border border-line" aria-label="Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
-  <div id="mobileNav" class="hidden lg:hidden border-t border-line bg-white">
-    <div class="px-4 py-4 space-y-2"><a href="index.php" class="block py-2 text-slate-700 font-semibold">Home</a><a href="about.php" class="block py-2 text-slate-700 font-semibold">About</a><a href="employers.php" class="block py-2 text-slate-700 font-semibold">Employers</a><a href="job-seekers.php" class="block py-2 text-slate-700 font-semibold">Job Seekers</a><a href="services.php" class="block py-2 text-slate-700 font-semibold">Services</a><a href="jobs.php" class="block py-2 text-slate-700 font-semibold">Jobs</a><a href="training.php" class="block py-2 text-slate-700 font-semibold">Training</a><a href="contact.php" class="block py-2 text-slate-700 font-semibold">Contact</a>
-      <a href="contact.php" class="block mt-2 btn-primary text-center px-5 py-2.5 rounded-full font-bold">Get Started</a>
-    </div>
-  </div>
-</header>
-
-<section class="gradient-hero py-20">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-    <span class="chip">Training & Compliance</span>
-    <h1 class="mt-5 text-4xl md:text-6xl font-extrabold text-navy">Safety, Quality and Trust at the Core</h1>
-    <p class="mt-5 text-lg text-slate-600">Our compliance framework keeps providers, professionals and the people they care for safe.</p>
-  </div>
-</section>
-<section class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="max-w-3xl mx-auto text-center mb-14 reveal">
-      <span class="chip">Our Standards</span>
-      <h2 class="mt-4 text-3xl md:text-5xl font-extrabold text-navy">Comprehensive Checks. Continuous Learning.</h2>
-      
-    </div>
-    
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-teal-50 text-teal grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">DBS Checks</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Enhanced DBS clearance for every placement.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-emerald-50 text-green-care grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Right to Work</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Full RTW verification and documentation.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-navy/5 text-navy grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Reference Checks</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Minimum two professional references verified.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-amber-50 text-gold grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Mandatory Training</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Care Certificate, manual handling, infection control and more.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-teal-50 text-teal grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Safeguarding Awareness</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Adults and children safeguarding training.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-navy/5 text-navy grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Ongoing CPD</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Specialist training and career development pathways.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-amber-50 text-gold grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Compliance Documentation</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Full audit trail provided to every employer.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-emerald-50 text-green-care grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Quality Audits</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Regular internal & external quality monitoring.</p>
-    </div>
-    
-    <div class="card-hover bg-white border border-line rounded-2xl p-7 reveal">
-      <div class="h-12 w-12 rounded-xl bg-teal-50 text-teal grid place-items-center mb-5"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/></svg></div>
-      <h3 class="text-lg font-bold text-navy mb-2">Best Practice</h3>
-      <p class="text-slate-600 text-sm leading-relaxed">Aligned with CQC, NMC and Skills for Care standards.</p>
-    </div>
-    
-    </div>
-  </div>
-</section>
-
-<section class="py-20 bg-cloud">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="reveal relative overflow-hidden bg-gradient-to-br from-navy to-teal rounded-[2rem] p-10 md:p-14 text-center text-white shadow-soft">
-      <div class="absolute -top-10 -right-10 h-60 w-60 bg-gold/30 rounded-full blur-3xl"></div>
-      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Ready to Hire Trusted Healthcare Staff or Start Your Healthcare Career?</h2>
-      <p class="mt-5 text-slate-200 max-w-2xl mx-auto">Whether you're a healthcare provider or a care professional — we're here to help you take the next step.</p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a href="contact.php" class="btn-primary px-7 py-3.5 rounded-full font-bold text-sm">Contact Us</a>
-        <a href="jobs.php" class="bg-white text-navy px-7 py-3.5 rounded-full font-bold text-sm hover:bg-cloud">Browse Jobs</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-navy text-slate-300 mt-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-4 gap-10">
-    <div>
-      <div class="flex items-center gap-3 mb-4">
-        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-teal to-gold grid place-items-center text-white font-bold">HH</div>
-        <div class="leading-tight">
-          <div class="font-display font-extrabold text-white">Helping Hands</div>
-          <div class="text-[11px] tracking-[0.18em] text-teal-50/80 uppercase">Health Group</div>
+<body>
+  <header id="site-header"
+    class="sticky top-0 z-50 w-full transition-all duration-300 bg-background/85 backdrop-blur-lg border-b border-border shadow-soft">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between py-3">
+        <a href="index.php" class="flex items-center gap-2.5 group">
+          <span
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary transition-transform group-hover:scale-105 shadow-soft"><svg
+              class="h-5 w-5 text-primary-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M19 14c1.5-1.5 3-3.4 3-5.6A5.4 5.4 0 0 0 12.6 4L12 4.6 11.4 4A5.4 5.4 0 0 0 2 8.4C2 13 7.5 16.8 12 21c1.1-1 2.3-2 3.4-3" />
+              <path d="M3 13h4l2-5 4 10 2-5h6" />
+            </svg></span>
+          <span class="flex flex-col leading-none"><span class="font-display font-bold text-base text-primary">Helping
+              Hands</span><span class="text-[11px] font-medium tracking-wider uppercase text-muted-foreground">Health
+              Group</span></span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-1"><a href="index.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">Home</a><a
+            href="about.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">About</a><a
+            href="employers.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">Employers</a><a
+            href="job-seekers.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">Job
+            Seekers</a><a href="services.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">Services</a><a
+            href="jobs.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">Jobs</a><a
+            href="training.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-primary bg-secondary">Training</a><a
+            href="contact.html"
+            class="rounded-full px-3.5 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-secondary text-muted-foreground">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="contact.php"
+            class="hidden sm:inline-flex items-center gap-2 rounded-full bg-brand-gold px-5 py-2.5 text-sm font-semibold text-brand-gold-foreground transition-all hover:brightness-95 hover:shadow-soft hover:-translate-y-0.5">Get
+            Started <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg></a>
+          <button id="menu-toggle"
+            class="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border"
+            aria-label="Menu"><svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg></button>
         </div>
       </div>
-      <p class="text-sm leading-relaxed text-slate-400">Compassionate healthcare staffing and support across the UK. Connecting trusted providers with skilled, compliant professionals.</p>
-      <div class="flex gap-3 mt-5">
-        <a href="#" class="h-9 w-9 rounded-full bg-white/10 hover:bg-teal grid place-items-center transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5v1.8h2.6L15.6 15h-2.2v7A10 10 0 0 0 22 12z"/></svg></a>
-        <a href="#" class="h-9 w-9 rounded-full bg-white/10 hover:bg-teal grid place-items-center transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18.3H5.7V9.7h2.6v8.6zM7 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11.3 9.8h-2.6v-4.6c0-1.1-.4-1.8-1.4-1.8-.8 0-1.2.5-1.4 1-.1.2-.1.4-.1.7v4.7h-2.6V9.7h2.6v1.1c.3-.5 1-1.3 2.4-1.3 1.8 0 3.1 1.1 3.1 3.6v5.2z"/></svg></a>
-        <a href="#" class="h-9 w-9 rounded-full bg-white/10 hover:bg-teal grid place-items-center transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8.5v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.28 0-.55-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+      <div id="mobile-menu" class="lg:hidden hidden pb-4 animate-fade-in">
+        <div class="grid gap-1 rounded-2xl border border-border bg-card p-3 shadow-card"><a href="index.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">Home</a><a
+            href="about.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">About</a><a
+            href="employers.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">Employers</a><a
+            href="job-seekers.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">Job
+            Seekers</a><a href="services.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">Services</a><a
+            href="jobs.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">Jobs</a><a
+            href="training.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-primary bg-secondary">Training</a><a
+            href="contact.html"
+            class="rounded-xl px-4 py-3 text-sm font-medium hover:bg-secondary hover:text-primary text-muted-foreground">Contact</a>
+          <a href="contact.php"
+            class="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-gold px-4 py-3 text-sm font-semibold text-brand-gold-foreground">Get
+            Started <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg></a>
+        </div>
       </div>
     </div>
-    <div>
-      <h4 class="text-white font-display font-bold mb-4">Quick Links</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="index.php" class="hover:text-teal">Home</a></li>
-        <li><a href="about.php" class="hover:text-teal">About Us</a></li>
-        <li><a href="employers.php" class="hover:text-teal">Employers</a></li>
-        <li><a href="job-seekers.php" class="hover:text-teal">Job Seekers</a></li>
-        <li><a href="jobs.php" class="hover:text-teal">Job Board</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-white font-display font-bold mb-4">Services</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="services.php" class="hover:text-teal">Nursing Recruitment</a></li>
-        <li><a href="services.php" class="hover:text-teal">Care Assistant Staffing</a></li>
-        <li><a href="services.php" class="hover:text-teal">Support Worker Staffing</a></li>
-        <li><a href="services.php" class="hover:text-teal">Domiciliary Care</a></li>
-        <li><a href="training.php" class="hover:text-teal">Training & Compliance</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-white font-display font-bold mb-4">Contact</h4>
-      <ul class="space-y-3 text-sm text-slate-400">
-        <li class="flex gap-3"><span class="text-teal">✉</span> hello@helpinghandshealthgroup.co.uk</li>
-        <li class="flex gap-3"><span class="text-teal">☏</span> +44 (0) 20 0000 0000</li>
-        <li class="flex gap-3"><span class="text-teal">⌂</span> London, United Kingdom</li>
-      </ul>
-    </div>
-  </div>
-  <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-      <p class="text-xs text-slate-500">© <?php echo date("Y"); ?> Helping Hands Health Group. All rights reserved.</p>
-      <div class="flex gap-5 text-xs text-slate-500">
-        <a href="#" class="hover:text-teal">Privacy</a><a href="#" class="hover:text-teal">Terms</a><a href="#" class="hover:text-teal">Cookies</a>
+  </header>
+  <main>
+    <section class="relative overflow-hidden bg-gradient-hero text-white">
+      <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,white,transparent_40%)]"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="space-y-5 animate-fade-up">
+            <nav class="flex items-center gap-1.5 text-sm text-white/70"><a href="index.html"
+                class="hover:text-white">Home</a><svg class="h-3.5 w-3.5" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" />
+              </svg><span class="text-white">Training &amp; Compliance</span></nav>
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white/80"><span
+                class="h-1.5 w-1.5 rounded-full bg-brand-teal"></span>Training &amp; Compliance</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold !text-white leading-[1.05]">Compliance-first,
+              training-led recruitment.</h1>
+            <p class="text-lg text-white/80 max-w-xl leading-relaxed">Every candidate is fully vetted, fully trained and
+              fully supported — so you can focus on delivering exceptional care.</p>
+          </div>
+          <div class="relative animate-fade-up [animation-delay:120ms]">
+            <div class="absolute -inset-4 rounded-3xl bg-brand-teal/20 blur-2xl"></div><img src="assets/training.jpg"
+              alt="" loading="lazy" class="relative rounded-3xl shadow-card object-cover w-full aspect-[4/3]" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="text-center mx-auto max-w-3xl space-y-4"><span
+          class="inline-flex items-center gap-2 rounded-full border px-3.5 py-1 text-xs font-semibold uppercase tracking-wider border-brand-teal/20 text-brand-teal bg-brand-teal/5"><span
+            class="h-1.5 w-1.5 rounded-full bg-brand-teal"></span>Our standards</span>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold ">Rigorous checks. Comprehensive training.</h2>
+      </div>
+      <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+              <path d="m9 12 2 2 4-5" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Enhanced DBS Checks</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Every candidate completes an enhanced Disclosure
+            &amp; Barring Service check before placement.</p>
+        </div>
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="m16 11 2 2 4-4" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Right to Work Checks</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">We verify right-to-work documentation in line
+            with UK Home Office guidance.</p>
+        </div>
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+              <path d="M14 2v6h6" />
+              <path d="m9 15 2 2 4-5" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Reference Checks</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Minimum of two professional references with
+            employment-history verification.</p>
+        </div>
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+              <path d="M6 12v5c3 2 9 2 12 0v-5" />
+              <path d="M22 10v6" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Mandatory Healthcare Training</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Care Certificate, manual handling, infection
+            control, first aid and more.</p>
+        </div>
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4" />
+              <path d="M12 16h.01" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Safeguarding Awareness</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Adult and child safeguarding training updated
+            annually for every active candidate.</p>
+        </div>
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m3 17 6-6 4 4 8-8" />
+              <path d="M14 7h7v7" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Ongoing Professional Development</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Free CPD modules, specialism upskilling and
+            clinical refresher courses.</p>
+        </div>
+        <div
+          class=" rounded-3xl border border-border bg-card p-7 hover:shadow-card hover:-translate-y-1 transition-all">
+          <span
+            class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-green/10 text-brand-green"><svg
+              class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+              <path d="m9 14 2 2 4-5" />
+            </svg></span>
+          <h3 class="mt-5 text-lg font-bold">Compliance Documentation</h3>
+          <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Full audit-ready compliance packs available on
+            request for every placement.</p>
+        </div>
+      </div>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-hero p-10 md:p-16 text-white shadow-card">
+        <div class="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-teal/30 blur-3xl"></div>
+        <div class="absolute -left-10 -bottom-10 h-60 w-60 rounded-full bg-brand-gold/20 blur-3xl"></div>
+        <div class="relative grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+          <div class="space-y-4">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold !text-white max-w-2xl leading-tight">Ready to hire
+              trusted healthcare staff or start your healthcare career?</h2>
+            <p class="text-white/75 max-w-xl">Whether you need dependable staff for tomorrow's shift or you're looking
+              for your next rewarding role — our team is ready to help.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-3"><a href="contact.html"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-brand-gold px-6 py-3.5 font-semibold text-brand-gold-foreground hover:brightness-95 transition-all">Contact
+              Us <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg></a><a href="jobs.html"
+              class="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 border border-white/20 px-6 py-3.5 font-semibold text-white hover:bg-white/15 transition-all"><svg
+                class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1" />
+                <rect x="3" y="6" width="18" height="14" rx="2" />
+                <path d="M3 12h18" />
+              </svg> Browse Jobs</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative mt-24 bg-primary text-primary-foreground">
+    <div class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-brand-teal to-transparent"></div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4 space-y-5"><a href="index.html" class="flex items-center gap-2.5 group">
+            <span
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 transition-transform group-hover:scale-105 shadow-soft"><svg
+                class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M19 14c1.5-1.5 3-3.4 3-5.6A5.4 5.4 0 0 0 12.6 4L12 4.6 11.4 4A5.4 5.4 0 0 0 2 8.4C2 13 7.5 16.8 12 21c1.1-1 2.3-2 3.4-3" />
+                <path d="M3 13h4l2-5 4 10 2-5h6" />
+              </svg></span>
+            <span class="flex flex-col leading-none"><span class="font-display font-bold text-base text-white">Helping
+                Hands</span><span class="text-[11px] font-medium tracking-wider uppercase text-white/70">Health
+                Group</span></span>
+          </a>
+          <p class="text-sm text-white/70 leading-relaxed max-w-sm">Helping Hands Health Group connects compassionate
+            healthcare professionals with trusted care providers across the United Kingdom — built on trust, compliance
+            and human connection.</p>
+          <div class="flex gap-3 pt-1"><a href="#"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-brand-teal transition-colors"
+              aria-label="Social link"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" />
+              </svg></a><a href="#"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-brand-teal transition-colors"
+              aria-label="Social link"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg></a><a href="#"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-brand-teal transition-colors"
+              aria-label="Social link"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M22 4.5c-.8.4-1.6.6-2.5.8a4.4 4.4 0 0 0-7.5 4v1A10.5 10.5 0 0 1 3 5s-4 9 5 13a11.6 11.6 0 0 1-7 2c9 5 20 0 20-11.5v-.5c.7-.5 1.3-1.1 2-1.8Z" />
+              </svg></a><a href="#"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-brand-teal transition-colors"
+              aria-label="Social link"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5h.01" />
+              </svg></a></div>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-white font-display font-semibold text-sm mb-4">Company</h4>
+          <ul class="space-y-2.5 text-sm text-white/70">
+            <li><a href="about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white">Services</a></li>
+            <li><a href="training.html" class="hover:text-white">Training</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="text-white font-display font-semibold text-sm mb-4">Services</h4>
+          <ul class="space-y-2.5 text-sm text-white/70">
+            <li><a href="services.html" class="hover:text-white">Healthcare Staffing</a></li>
+            <li><a href="services.html" class="hover:text-white">Nursing Recruitment</a></li>
+            <li><a href="services.html" class="hover:text-white">Care Assistant Recruitment</a></li>
+            <li><a href="services.html" class="hover:text-white">Domiciliary Care</a></li>
+            <li><a href="training.html" class="hover:text-white">Compliance & Training</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="text-white font-display font-semibold text-sm mb-4">Get in touch</h4>
+          <ul class="space-y-3 text-sm text-white/70">
+            <li class="flex items-start gap-3"><svg class="h-4 w-4 mt-0.5 text-brand-teal"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg><span>hello@helpinghandshealthgroup.co.uk</span></li>
+            <li class="flex items-start gap-3"><svg class="h-4 w-4 mt-0.5 text-brand-teal"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6A2 2 0 0 1 22 16.9Z" />
+              </svg><span>+44 (0) 20 1234 5678</span></li>
+            <li class="flex items-start gap-3"><svg class="h-4 w-4 mt-0.5 text-brand-teal"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 4.4-8 12-8 12S4 14.4 4 10a8 8 0 1 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg><span>1 Healthcare Way, London, EC1A 1AA</span></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-12 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
+        <p>© 2026 Helping Hands Health Group. All rights reserved.</p>
+        <p>helpinghandshealthgroup.co.uk · Registered in England & Wales</p>
       </div>
     </div>
-  </div>
-</footer>
-<script>
-  const btn=document.getElementById('menuBtn'), m=document.getElementById('mobileNav');
-  if(btn) btn.addEventListener('click',()=>m.classList.toggle('hidden'));
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body></html>
+  </footer>
+  <script>
+    const menuButton = document.getElementById('menu-toggle'); const menu = document.getElementById('mobile-menu'); if (menuButton && menu) { menuButton.addEventListener('click', () => menu.classList.toggle('hidden')); }
+    const empBtn = document.getElementById('tab-employer'), seekerBtn = document.getElementById('tab-seeker'), orgLabel = document.getElementById('org-label'), orgInput = document.getElementById('org-input');
+    function setTab(which) { if (!empBtn || !seekerBtn) return; const active = 'bg-primary text-primary-foreground shadow-soft', inactive = 'text-muted-foreground'; if (which === 'employer') { empBtn.className = 'px-5 py-2 rounded-full text-sm font-semibold transition-all ' + active; seekerBtn.className = 'px-5 py-2 rounded-full text-sm font-semibold transition-all ' + inactive; if (orgLabel) orgLabel.textContent = 'Organisation'; if (orgInput) orgInput.placeholder = 'Care home or hospital'; } else { seekerBtn.className = 'px-5 py-2 rounded-full text-sm font-semibold transition-all ' + active; empBtn.className = 'px-5 py-2 rounded-full text-sm font-semibold transition-all ' + inactive; if (orgLabel) orgLabel.textContent = 'Role of interest'; if (orgInput) orgInput.placeholder = 'e.g. Healthcare Assistant'; } }
+    if (empBtn) empBtn.addEventListener('click', () => setTab('employer')); if (seekerBtn) seekerBtn.addEventListener('click', () => setTab('seeker'));
+  </script>
+</body>
+
+</html>
