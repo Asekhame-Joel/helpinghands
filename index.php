@@ -944,7 +944,7 @@
       <div>
         <h4 class="text-white font-display font-bold mb-4">Contact</h4>
         <ul class="space-y-3 text-sm text-slate-400">
-          <li class="flex gap-3"><span class="text-teal">✉</span> enquiries@helpinghandshealthgroup.co.uk@helpinghandshealthgroup.co.uk</li>
+          <li class="flex gap-3"><span class="text-teal">✉</span> enquiries@helpinghandshealthgroup.co.uk</li>
           <li class="flex gap-3"><span class="text-teal">☏</span> +44 (0) 20 0000 0000</li>
           <li class="flex gap-3"><span class="text-teal">⌂</span> London, United Kingdom</li>
         </ul>
