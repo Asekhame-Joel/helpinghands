@@ -220,7 +220,7 @@
             <polyline points="22,6 12,13 2,6" />
           </svg></div>
         <div class="text-xs font-bold uppercase text-slate-500">Email</div>
-        <div class="mt-1 font-bold text-navy">hello@helpinghandshealthgroup.co.uk</div>
+        <div class="mt-1 font-bold text-navy">enquiries@helpinghandshealthgroup.co.uk</div>
       </div>
 
       <div class="reveal card-hover bg-cloud border border-line rounded-2xl p-7 text-center">
@@ -251,17 +251,17 @@
         class="reveal bg-white border border-line rounded-3xl p-8 md:p-10 shadow-card">
         <h3 class="text-2xl font-extrabold text-navy">Send Us a Message</h3>
         <p class="mt-1 text-slate-500 text-sm">We respond within one working day.</p>
-                <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+        <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
           <div class="mt-5 mb-6 rounded-2xl border border-green-200 bg-green-50 px-5 py-4 text-green-700 font-semibold">
             Your message has been sent successfully. We will get back to you shortly.
           </div>
-                <?php endif; ?>
+        <?php endif; ?>
 
-                <?php if (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
+        <?php if (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
           <div class="mt-5 mb-6 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-red-700 font-semibold">
             Sorry, your message could not be sent. Please try again.
           </div>
-                <?php endif; ?>
+        <?php endif; ?>
         <!-- Basic anti-spam honeypot. Leave hidden and empty. -->
         <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
@@ -389,7 +389,7 @@
       <div>
         <h4 class="text-white font-display font-bold mb-4">Contact</h4>
         <ul class="space-y-3 text-sm text-slate-400">
-          <li class="flex gap-3"><span class="text-teal">✉</span> hello@helpinghandshealthgroup.co.uk</li>
+          <li class="flex gap-3"><span class="text-teal">✉</span> enquiries@helpinghandshealthgroup.co.uk</li>
           <li class="flex gap-3"><span class="text-teal">☏</span> +44 (0) 20 0000 0000</li>
           <li class="flex gap-3"><span class="text-teal">⌂</span> London, United Kingdom</li>
         </ul>

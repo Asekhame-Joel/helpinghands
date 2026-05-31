@@ -61,7 +61,7 @@ For Gmail, use an App Password, not your normal Gmail password.
 When live, change `from_email` to your domain email, for example:
 
 ```php
-'from_email' => 'hello@helpinghandshealthgroup.co.uk',
+'from_email' => 'enquiries@helpinghandshealthgroup.co.uk',
 ```
 
 If using Hostinger email, change SMTP settings to the values from Hostinger.

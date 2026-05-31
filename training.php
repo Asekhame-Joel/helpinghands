@@ -415,7 +415,7 @@
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="m3 7 9 6 9-6" />
-              </svg><span>hello@helpinghandshealthgroup.co.uk</span></li>
+              </svg><span>enquiries@helpinghandshealthgroup.co.uk</span></li>
             <li class="flex items-start gap-3"><svg class="h-4 w-4 mt-0.5 text-brand-teal"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
